@@ -1,0 +1,239 @@
+container:
+  type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{"MBRWRK":30,"SZHWXR":30}',
+    spacing_below: small, background: ''}
+components:
+- type: Link
+  properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '#000000',
+    visible: true, text: All brands, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+    spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: 'fa:chevron-left'}
+  name: link_back
+  layout_properties: {grid_position: 'DZXOZU,EHNVWY'}
+  event_bindings: {click: link_back_click}
+- type: Link
+  properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+    visible: true, text: Edit brand information, font_size: null, wrap_on: mobile,
+    font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+    spacing_below: small, italic: false, background: '', bold: false, underline: true,
+    icon: ''}
+  name: link_edit
+  layout_properties: {grid_position: 'FCIQJO,AGFEXS'}
+- type: Image
+  properties: {role: null, vertical_align: center, height: '150', tooltip: '', border: '',
+    foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+    source: '', spacing_below: small, background: '', horizontal_align: center}
+  name: image_banner
+  layout_properties: {grid_position: 'QCLEJX,CBQGSK'}
+- type: FileLoader
+  properties:
+    role: null
+    show_state: true
+    align: center
+    tooltip: ''
+    border: ''
+    file_types: null
+    enabled: true
+    files: []
+    foreground: ''
+    visible: false
+    text: Upload banner
+    font_size: null
+    font: ''
+    spacing_above: small
+    icon_align: left
+    spacing_below: small
+    italic: false
+    file: null
+    background: ''
+    bold: false
+    underline: false
+    multiple: false
+    icon: fa:upload
+  name: file_loader_banner
+  layout_properties: {grid_position: 'DCTBBO,DACEZE'}
+- type: Image
+  properties: {role: null, vertical_align: center, height: '100', tooltip: '', border: '',
+    foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+    source: '', spacing_below: small, background: '', horizontal_align: center}
+  name: image_logo
+  layout_properties: {grid_position: 'MHZHAW,KDUVSM'}
+- type: FileLoader
+  properties:
+    role: null
+    show_state: true
+    align: center
+    tooltip: ''
+    border: ''
+    file_types: null
+    enabled: true
+    files: []
+    foreground: ''
+    visible: false
+    text: Upload logo
+    font_size: null
+    font: ''
+    spacing_above: small
+    icon_align: left
+    spacing_below: small
+    italic: false
+    file: null
+    background: ''
+    bold: false
+    underline: false
+    multiple: false
+    icon: fa:upload
+  name: file_loader_logo
+  layout_properties: {grid_position: 'EMUBQJ,BQWAXK'}
+- type: Spacer
+  properties: {height: 32}
+  name: spacer
+  layout_properties: {grid_position: 'PUIRWC,JDLUKB'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Brand name:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_name
+  layout_properties: {grid_position: 'TKTCAS,MBRWRK'}
+- type: FlowPanel
+  properties: {role: null, spacing: medium, align: right, tooltip: '', border: '',
+    foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+  name: flow_panel_name
+  layout_properties: {grid_position: 'TKTCAS,SZHWXR'}
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: label_display_name
+    layout_properties: {grid_position: 'TKTCAS,VVTBJM'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: e.g. Mango Oaxaqueno,
+      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: text_box_edit_name
+    layout_properties: {grid_position: 'TKTCAS,JWLHXC'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Created at:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_created
+  layout_properties: {grid_position: 'DVPBIU,PPGAHM'}
+- type: Label
+  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_display_created
+  layout_properties: {grid_position: 'DVPBIU,DLFHVE'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Code name:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_code_name
+  layout_properties: {grid_position: 'DNLULC,GOBWUF'}
+- type: FlowPanel
+  properties: {role: null, spacing: medium, align: right, tooltip: '', border: '',
+    foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+  name: flow_panel_code_name
+  layout_properties:
+    col_widths: {}
+    grid_position: DNLULC,HXSMXV
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: label_display_code_name
+    layout_properties: {grid_position: 'TKTCAS,VVTBJM'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: e.g. maoa,
+      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: text_box_edit_code_name
+    layout_properties: {grid_position: 'TKTCAS,JWLHXC'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Category:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_category
+  layout_properties: {grid_position: 'MVKUZD,CPVQJN'}
+- type: FlowPanel
+  properties: {role: null, spacing: medium, align: right, tooltip: '', border: '',
+    foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+  name: flow_panel_name_copy
+  layout_properties:
+    col_widths: {}
+    grid_position: MVKUZD,OWSSZY
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: label_display_category
+    layout_properties: {grid_position: 'TKTCAS,VVTBJM'}
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+      visible: false, text: Edit category, font_size: null, wrap_on: mobile, font: '',
+      col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: 'fa:plus-square-o'}
+    name: link_edit_category
+    layout_properties: {}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Description:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_description
+  layout_properties: {grid_position: 'EFPVHW,AMGBIC'}
+- type: Label
+  properties: {}
+  name: label_display_description
+  layout_properties: {grid_position: 'NAJMGM,ZJVYXZ'}
+- type: TextArea
+  properties: {role: null, align: left, height: '', tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: false, text: e.g. Est enim quam porro. Recusandae laudantium voluptatibus sit distinctio iure occaecati. Architecto tempora consequatur at est sit nulla ut maiores. Reiciendis voluptatibus aut vel accusamus qui qui magni eos. Consequuntur repudiandae eum neque in in eos doloribus ea.,
+    font_size: null, auto_expand: true, font: '', spacing_above: small, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false}
+  name: text_area_edit_description
+  layout_properties: {grid_position: 'XFJSYY,HCJSBP'}
+- type: Spacer
+  properties: {height: 32}
+  name: spacer_1
+  layout_properties: {grid_position: 'UZNBBO,NLGSXK'}
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: '   Add new product', font_size: 20, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '',
+    bold: true, underline: false, icon: 'fa:plus'}
+  name: button_add_product
+  layout_properties: {grid_position: 'OVAVVI,NVVGFT'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Products:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_brand_products
+  layout_properties: {grid_position: 'JLVITZ,VWBGDI'}
+- type: RepeatingPanel
+  properties: {item_template: All_brands.Create_brand.Product_card}
+  name: repeating_panel_product_a
+  layout_properties: {grid_position: 'KOVTTV,RSPCOE'}
+- type: RepeatingPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', items: null, visible: true,
+    spacing_above: small, spacing_below: small, item_template: All_brands.Create_brand.Product_card,
+    background: ''}
+  name: repeating_panel_product_b
+  layout_properties: {grid_position: 'KOVTTV,HTIMPW'}
+is_package: true

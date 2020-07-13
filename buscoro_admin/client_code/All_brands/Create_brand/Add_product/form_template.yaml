@@ -1,0 +1,268 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: Link
+  properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '#000000',
+    visible: true, text: '', font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+    spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: 'fa:chevron-left'}
+  name: link_back
+  layout_properties:
+    col_widths: {}
+    grid_position: QZNUXU,DOTYHF
+- type: Link
+  properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '',
+    visible: true, text: Edit product information, font_size: null, wrap_on: mobile,
+    font: '', col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+    spacing_below: small, italic: false, background: '', bold: false, underline: true,
+    icon: ''}
+  name: link_edit
+  layout_properties:
+    col_widths: {}
+    grid_position: AEWAGH,JEJLBI
+- type: Spacer
+  properties: {height: 32}
+  name: spacer_1
+  layout_properties: {grid_position: 'MGKDJI,BCEFFH'}
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: '   Add pictures', font_size: null, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '',
+    bold: true, underline: false, icon: 'fa:picture-o'}
+  name: button_add_picture
+  layout_properties: {grid_position: 'GSDOPV,NJCHCB'}
+- type: Label
+  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: true, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_number_picture
+  layout_properties: {grid_position: 'XPMNAA,NLUHAM'}
+- type: DropDown
+  properties:
+    role: null
+    align: center
+    tooltip: ''
+    placeholder: ''
+    border: ''
+    enabled: true
+    foreground: ''
+    items: []
+    visible: true
+    font_size: null
+    font: ''
+    spacing_above: small
+    spacing_below: small
+    italic: false
+    background: ''
+    bold: false
+    underline: false
+    include_placeholder: false
+  name: drop_down_choose_thumbnail
+  layout_properties: {grid_position: 'WWUOTL,GERDFF'}
+- type: Spacer
+  properties: {height: 32}
+  name: spacer_2
+  layout_properties: {grid_position: 'PLDMWD,XEGKWV'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Product name:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_name
+  layout_properties: {grid_position: 'ODCKHQ,TAIMTJ'}
+- type: FlowPanel
+  properties: {role: null, spacing: medium, align: right, tooltip: '', border: '',
+    foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+  name: flow_panel_name
+  layout_properties:
+    col_widths: {}
+    grid_position: ODCKHQ,ZSIPIA
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: label_display_name
+    layout_properties: {grid_position: 'TKTCAS,VVTBJM'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: e.g. Mango Oaxaqueno,
+      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: text_box_edit_name
+    layout_properties: {grid_position: 'TKTCAS,JWLHXC'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'SKU:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_sku
+  layout_properties: {grid_position: 'SRNPHG,PTHAMY'}
+- type: FlowPanel
+  properties: {role: null, spacing: medium, align: right, tooltip: '', border: '',
+    foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+  name: flow_panel_name_copy
+  layout_properties:
+    col_widths: {}
+    grid_position: SRNPHG,OKJSVT
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: label_display_sku
+    layout_properties: {grid_position: 'TKTCAS,VVTBJM'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: e.g. 9999,
+      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: text_box_edit_sku
+    layout_properties: {grid_position: 'TKTCAS,JWLHXC'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Created at:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_created
+  layout_properties: {grid_position: 'TECFHH,BDYUUC'}
+- type: Label
+  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_display_created
+  layout_properties:
+    col_widths: {}
+    grid_position: TECFHH,LAAOKV
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Brand:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_brand
+  layout_properties: {grid_position: 'JTHSNZ,ZANRFH'}
+- type: Label
+  properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_display_brand
+  layout_properties:
+    col_widths: {}
+    grid_position: JTHSNZ,KTCWCA
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Price single:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_price_single
+  layout_properties: {grid_position: 'OOWTFW,NTULPA'}
+- type: FlowPanel
+  properties: {role: null, spacing: medium, align: right, tooltip: '', border: '',
+    foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+  name: flow_panel_name_copy_2
+  layout_properties:
+    col_widths: {}
+    grid_position: OOWTFW,DQGYXL
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: label_display_price_single
+    layout_properties: {grid_position: 'TKTCAS,VVTBJM'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: e.g. $30,
+      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: text_box_edit_price_single
+    layout_properties: {grid_position: 'TKTCAS,JWLHXC'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Price team:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_price_team
+  layout_properties: {grid_position: 'WTMPJU,UFXJBF'}
+- type: FlowPanel
+  properties: {role: null, spacing: medium, align: right, tooltip: '', border: '',
+    foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+  name: flow_panel_name_copy_3
+  layout_properties:
+    col_widths: {}
+    grid_position: WTMPJU,ARGBED
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: label_display_price_team
+    layout_properties: {grid_position: 'TKTCAS,VVTBJM'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: e.g. $30,
+      border: '', enabled: true, foreground: '', visible: false, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: text_box_edit_price_team
+    layout_properties: {grid_position: 'TKTCAS,JWLHXC'}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Category:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_category
+  layout_properties: {grid_position: 'CFZVAI,MDQGUV'}
+- type: FlowPanel
+  properties: {role: null, spacing: medium, align: right, tooltip: '', border: '',
+    foreground: '', visible: true, spacing_above: small, spacing_below: small, background: ''}
+  name: flow_panel_name_copy_4
+  layout_properties:
+    col_widths: {}
+    grid_position: CFZVAI,HIUKLH
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: label_display_category
+    layout_properties: {grid_position: 'TKTCAS,VVTBJM'}
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '',
+      visible: false, text: Edit category, font_size: null, wrap_on: mobile, font: '',
+      col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: 'fa:plus-square-o'}
+    name: link_edit_category
+    layout_properties: {}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: 'Description:', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_description
+  layout_properties: {grid_position: 'EXYKEL,YXAVZD'}
+- type: Label
+  properties: {}
+  name: label_display_description
+  layout_properties:
+    col_widths: {}
+    grid_position: INGBPE,BLKVKT
+- type: TextArea
+  properties: {role: null, align: left, height: '', tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: false, text: e.g. Est enim quam porro. Recusandae laudantium voluptatibus sit distinctio iure occaecati. Architecto tempora consequatur at est sit nulla ut maiores. Reiciendis voluptatibus aut vel accusamus qui qui magni eos. Consequuntur repudiandae eum neque in in eos doloribus ea.,
+    font_size: null, auto_expand: true, font: '', spacing_above: small, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false}
+  name: text_area_edit_description
+  layout_properties:
+    col_widths: {}
+    grid_position: XXSTXR,POTNWO
+is_package: true

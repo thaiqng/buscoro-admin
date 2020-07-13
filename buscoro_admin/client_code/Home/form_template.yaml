@@ -1,0 +1,63 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:dashboard.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components: []
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '#ffffff',
+    visible: true, text: bazari. admin, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_title
+  layout_properties: {slot: title}
+- type: Link
+  properties: {role: null, url: '', align: center, tooltip: '', border: '', foreground: '#666666',
+    visible: false, text: Add a new admin, font_size: null, wrap_on: mobile, font: '',
+    col_spacing: medium, spacing_above: small, icon_align: top, col_widths: '', spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: 'fa:user-plus'}
+  name: link_create_admin
+  layout_properties: {slot: sidebar}
+- type: Link
+  properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '#666666',
+    visible: true, text: Pages, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+    spacing_above: small, icon_align: right_edge, col_widths: '', spacing_below: small,
+    italic: false, background: '', bold: true, underline: false, icon: 'fa:caret-up'}
+  name: link_navigation
+  layout_properties: {slot: sidebar}
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: column_panel_navigation
+  layout_properties: {slot: sidebar}
+  components:
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '#666666',
+      visible: true, text: Dashboard, font_size: null, wrap_on: mobile, font: '',
+      col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '',
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAC/klEQVRoge1Z25HqMAxVCengpgRKoARK0GBJzgwfmw6WDpYO2A7YDiiBElxCStj9QM4ak4TgPGDnopnzgZkYnejoYQPwspe9bFZDxIyZFyKyYmZExEzXUNcWiJg92s8rQ8SMiJYi8iEiTkS+Q2w2m39FUeTxOjOfrLV7Ilo+nAAAwHq9LmMn+xAJQUTHRxDIrbV7dWCpEamGEGFmBACw1u6ttXtEzCclYYx5C51m5h0AgIh8phJh5qooihwR8yhK76MTQMSciI5NTgQ5kkTEWrsHOEej4Xs3WnQQcdElHZVXq6O3iBhjVl3Pi4hj5sVgIsx86tK3kknOESKqup5Xsp9DCCwAANSJq7LaF0RUGmPeUp9n5pMqI787MpoTlTFmPwaZISTKsswQMVOJVb3JqF5rp0MytyQwMglfzbJI3q7XZNBSPQ63Gt8UWK/XZVO1FJFDJwmdh2Z1NhWdo408IA8GoFlifykaAbZXRLQyff6VqBDR8UpeekbIPSGNziyEiOh4TyGJCVzIS0QOIue5xxOaukoRUeWnXgCAPqXdz2WImKl/7uII0MJ6sp7BzLuyLOs3eUfndyLyEU3gFSJm0DW5TiGjuDPHDThx3yWIyHYOAl7XOva/i8gKoLUB37t/WefHXARUFs4XmZF+56vXmJ6wcdVC4Fvk92g7VFIBXK9qcS+8o/HR2Edp7AbMzBVYa49dSNr0XE4bi0hqNPT6qNXPqw4fW4L0nDraVER8btwVDSL6uumov4Jpw5gRGZgbhy4/J8kRn+hRVLZj58bFy0t8OzflFV7j+C4+RvNreXGnyfoIM1f+bldEVnEJHpnIEZh5N8XmM2MLxpjVEzgyCMaYFehVSximSquVe7SDTWiSZ30msdb6sX3rE1NmGCYTSJRB5XO69tsMi6KoK4xezk2WmAPhRKfmoFfVn+vFljukZ4QLT5cX9oxS6iu1C7v1z9MTwoUpEctr9mvRVLRKy1vK6P6IaHSSAJj/1n1USTWRYWZ8Ugz/G+5lL/sP7QdRFR3b5y1LhQAAAABJRU5ErkJggg=='}
+    name: link_dashboard
+    layout_properties: {slot: sidebar, grid_position: 'ITAFHG,TVIVOO'}
+    event_bindings: {click: link_dashboard_click}
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '#666666',
+      visible: true, text: Brands, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+      spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAChUlEQVRogd2a0ZGjMAyGXQIdHCWkhJSQEjSjX7+Z2Yelg6ODbAfZDnIdpIQtgRJSAvdiMlw2cBAwJqsZPQb8IUX6Zdu5iCYiOYALyVpE8pjvimaq+g7gSrIh2ZjZFUCZel2jTUQyVT21APfuvT9tIjrhS1+89yeSlZkJgL2Z7QDsSdZ9EB2vzWxXFEVO8mBmQrIKzzyTPEaFEJF8xCIXcQD7aCDhi60C4r0/RYFYMxptcRCRbHEQksc1QYJXMUDG/Im3GxURyRJFo/V5FUxEMgC/u00todckj5P6D4C99/60EYBvPqqhJk6hqV4NgZw3sMBRDuAyBPKZeoFjfbBhkqxSL3CC96dWEG+pFzjKzUx6QVT1kGhh9dQqOSgqg6xeHaIoijyMAFMishtKrV0KCBHJzOxrkYgEdVu/AkT7+4c6bM1ZYwGIhmSjqv+WYFV9fzWIToqVt5RaUVctCkHepH6+5pyxOEQH5st57y+vDNE+34Ua/mxqjYlmVAgA16IocueccwDKZ8JZlmXGYX0WOxLNt91LVZ2kfM3s2nbXHpjoEA8VcJjNx6TKGJjoEO07Hnb3qXrnEQyAywoQcbRWF6aNbkwIks3b29uvXpBnInIPswYEyUZVD0MRmTVYBZjoEOFd0gvCnzLq8qdsPqwkVxZxAH+G/uyTO3wqN7OPXhDnbnP7JlMMwDVs5+4HIe6BzOyDCY4THgGQrMqynHfEEICSpdBsgNbCEUOK3fl6EYCuMUGPiXIgmiIqvep2rnHFahbteNq5eaJyM9FoLVSwc/cKh6oeQrneceQc37320b3CEdRFFRVijP2voarq52LldA0DUHaLA4DXuubUtRCduh1/Y77rL2vs1R20HsOmAAAAAElFTkSuQmCC'}
+    name: link_brands
+    layout_properties: {slot: sidebar, grid_position: 'QYTMEC,HTWXER'}
+    event_bindings: {click: link_brands_click}
+  - type: Link
+    properties: {role: null, url: '', align: left, tooltip: '', border: '', foreground: '#666666',
+      visible: true, text: Account, font_size: null, wrap_on: mobile, font: '', col_spacing: medium,
+      spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACJklEQVRoge2Z0ZGjMAyGXUI6OJeQEihhS9CA9MszeTg6WDrYdJDtICVQQkqgBErgHs7scDdMsmCDndn8M3rXh5As/zbmpZeeR0RkmfkdwBVAB6Bj5hZAQ0Q2dX4PRUQHAB8AhnuhqhciOqTOd1ZEZP3XvwsxiS7L6iyEGAAMInJLnfc/8v2wCGISTer8v7SmGpOq9Fn0S1VVbwHVGAAMzFyk5jAAmlCQLH4vAJ+hIKp6Sc1hROQcCiIi59QcpizLOgIIpeYwzjkbCuKcs6k5jDHGqGobAHJNnf+XnHOWmfunrsYoEaGn7I05+cOxewTAzH22EKN883/OAfnfr6nrOv1KskQicmTmgpkLETmmzme1iOjgnLPOOZvFYvhdEdGhLMuamdu5KcbMPTO3IkJZXqr8HX3xWeKvvDZ1/saY4EvVWKn3ZABEZEXkFgoxOVNuu1dnhdHw3djPkNgQYgqz/YTDX9NtK4ixZ9pNIaqq+r01xASm3gTCj9hVG+7K5t/GXVHVy14Qk2iiQvgG3xsiflXW3DWyrAq2HbePoosCISLHhBADgOF0Ov0KBolh94RGlFGMHQ7ARxHFiYy5GAZEeJ9kADGISB8E4d8Ek4MAgQ0fww7NAsRXpEsNgVirPTMXSDC9vA/wFgzwv5xztizLestJxsy9qp53e44boVR11vpZEiJy2zX5exKRo/d+GwBXVW195box/PPDVVXP3v8qns4+femn6Q+/FvpWOpv+TgAAAABJRU5ErkJggg=='}
+    name: link_account
+    layout_properties: {slot: sidebar, grid_position: 'MXWBQY,HROYVR'}
+    event_bindings: {click: link_account_click}

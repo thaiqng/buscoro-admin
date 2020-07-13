@@ -1,0 +1,78 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: Label
+  properties: {role: title, align: left, tooltip: '', border: '', foreground: '',
+    visible: true, text: 'Get brand by code name:', font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_get_brand
+  layout_properties: {grid_position: 'LKQXID,JLBVFB'}
+- type: Link
+  properties: {role: null, url: '', align: right, tooltip: '', border: '', foreground: '',
+    visible: true, text: 'Get brand  ', font_size: null, wrap_on: mobile, font: '',
+    col_spacing: medium, spacing_above: small, icon_align: left, col_widths: '', spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: 'fa:qrcode'}
+  name: link_get_brand
+  layout_properties: {grid_position: 'LKQXID,THWNWK'}
+  event_bindings: {click: link_get_brand_click}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: e.g. mrka,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: text_box_get_brand
+  layout_properties: {grid_position: 'XYIOZM,CPLHQK'}
+  data_bindings:
+  - {property: text, code: 'self.item[''code_name'']', writeback: true}
+- type: Label
+  properties: {role: title, align: left, tooltip: '', border: '', foreground: '',
+    visible: true, text: 'Or add a new brand:', font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_create_brand
+  layout_properties:
+    col_widths: {}
+    grid_position: GWRTQF,JPJLUN
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: '   Add new brand', font_size: 20, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '',
+    bold: true, underline: false, icon: 'fa:plus'}
+  name: button_add_brand
+  layout_properties:
+    col_widths: {}
+    grid_position: HORRUZ,SPHGQY
+  event_bindings: {show: button_add_brand_show}
+- type: Spacer
+  properties: {height: 32}
+  name: spacer
+  layout_properties: {grid_position: 'CGHQHE,SCLMTS'}
+- type: Label
+  properties: {role: title, align: center, tooltip: '', border: '', foreground: '',
+    visible: true, text: All brands, font_size: 20, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_all_brands
+  layout_properties:
+    col_widths: {}
+    grid_position: CCSRQG,PVOTXX
+- type: Label
+  properties: {role: title, align: left, tooltip: '', border: '', foreground: '',
+    visible: true, text: 'Filter brands by category:', font_size: null, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '',
+    bold: false, underline: false, icon: ''}
+  name: label_filter_brands
+  layout_properties:
+    col_widths: {}
+    grid_position: SCDLDK,PUVDSS
+- type: DropDown
+  properties: {}
+  name: drop_down_category
+  layout_properties: {grid_position: 'RISNRS,RTUAJJ'}
+- type: RepeatingPanel
+  properties: {item_template: All_brands.Brand_card}
+  name: repeating_panel_brand
+  layout_properties: {grid_position: 'JQMGOP,CCHFFP'}
+is_package: true
